@@ -31,6 +31,11 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'prescription_upload',
+    'ocr_processing',
+    'drug_matching',
+    'user_management',
+    'results_display',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
