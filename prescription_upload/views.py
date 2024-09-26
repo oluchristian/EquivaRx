@@ -1,3 +1,11 @@
 from django.shortcuts import render
+from .forms import PrescriptionUploadForm
 
-# Create your views here.
+def PrescriptionUploadView(request):
+    if request.method == "POST":
+        form = PrescriptionUploadForm(request.POST)
+        if form.is_valid():
+            pass
+    else:
+        form = PrescriptionUploadForm()
+        pass
