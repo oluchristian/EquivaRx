@@ -8,4 +8,4 @@ def PrescriptionUploadView(request):
             pass
     else:
         form = PrescriptionUploadForm()
-        pass
+        return render()
