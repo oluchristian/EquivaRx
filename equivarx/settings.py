@@ -111,12 +111,13 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny'
     ]
 }
+import cloudinary
 
-CLOUDINARY_STORAGE = {
-    'cloud_name': 'dh0o2azwr',
-    'api_key': '855948188383164',
-    'api_secret': '2Obg-hfVq5d5DmPpsUzvq2bVJYQ'
-}
+cloudinary.config(
+    cloud_name='dh0o2azwr',
+    api_key='855948188383164',
+    api_secret='2Obg-hfVq5d5DmPpsUzvq2bVJYQ'
+)
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
