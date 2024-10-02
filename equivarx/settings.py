@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'cloudinary',
+    'rest_framework',
     'prescription_upload',
     'ocr_processing',
     'drug_matching',
@@ -104,6 +106,20 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny'
+    ]
+}
+import cloudinary
+
+cloudinary.config(
+    cloud_name='dh0o2azwr',
+    api_key='855948188383164',
+    api_secret='2Obg-hfVq5d5DmPpsUzvq2bVJYQ'
+)
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
